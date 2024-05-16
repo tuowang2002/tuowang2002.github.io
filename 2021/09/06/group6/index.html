@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>有关自同构群的一些问题 | 王拓的学术主页</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
+  <meta name="description" content="抽象代数 群论有关自同构群的一些问题问题一：若G是无限循环群，则$ AutG $为2阶循环群">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有关自同构群的一些问题">
+<meta property="og:url" content="https://tuowang2002.github.io/2021/09/06/group6/index.html">
+<meta property="og:site_name" content="王拓的学术主页">
+<meta property="og:description" content="抽象代数 群论有关自同构群的一些问题问题一：若G是无限循环群，则$ AutG $为2阶循环群">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-16T04:28:03.916Z">
+<meta property="article:author" content="Tuo Wang">
+<meta property="article:tag" content="群论">
+<meta name="twitter:card" content="summary">
+
+  <meta name="keywords" content=",群论">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="王拓的学术主页">
+  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/2021/09/06/group6/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="王拓的学术主页">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <link rel="canonical" href="https://tuowang2002.github.io/2021/09/06/group6/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">王拓的学术主页</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'Search'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="https://tuowang2002.github.io"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/cabbage.jpg" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">Tuo Wang</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>C&#39;estbon</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">Home</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">Archive</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2024/05/">May 2024<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/11/">November 2021<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/10/">October 2021<span class="mdui-ripple sidebar_archives-count">6</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/09/">September 2021<span class="mdui-ripple sidebar_archives-count">12</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">Category</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/AMP/">AMP<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数<span class="mdui-ripple sidebar_archives-count">20</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">Tag</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%9F%9F/" rel="tag">域<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%8E%AF/" rel="tag">环<span class="mdui-ripple sidebar_archives-count">6</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%BE%A4%E8%AE%BA/" rel="tag">群论<span class="mdui-ripple sidebar_archives-count">12</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/" rel="tag">预备知识<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">About</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a target="_blank" rel="noopener" href="http://math.wangtuo.co/travel/index.html" class="mdui-list-item mdui-ripple">旅游</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">Links</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        
+          <a href="javascript:;" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme mdui-ripple" style="justify-content: center;">No Links</a>
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-11.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">有关自同构群的一些问题</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-09-06 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="//chart.googleapis.com/chart?cht=qr&chs=246x246&chl=https://tuowang2002.github.io/2021/09/06/group6/&chld=M|2">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=有关自同构群的一些问题&url=https://tuowang2002.github.io/2021/09/06/group6/&pic=https://tuowang2002.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=有关自同构群的一些问题&url=https://tuowang2002.github.io/2021/09/06/group6/&via=Tuo Wang" target="_blank" class="mdui-ripple">Share to Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://tuowang2002.github.io/2021/09/06/group6/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=https://tuowang2002.github.io/2021/09/06/group6/" target="_blank" class="mdui-ripple">Share to Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://tuowang2002.github.io/2021/09/06/group6/&title=有关自同构群的一些问题" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=王拓的学术主页&title=有关自同构群的一些问题&pics=https://tuowang2002.github.io/images/favicon.png&url=https://tuowang2002.github.io/2021/09/06/group6/" target="_blank" class="mdui-ripple">Share to QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=https://tuowang2002.github.io/2021/09/06/group6/&text=有关自同构群的一些问题" target="_blank" class="mdui-ripple">Share to Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <hr>
+<h1 id="抽象代数"><a href="#抽象代数" class="headerlink" title="抽象代数"></a>抽象代数</h1><hr>
+<h2 id="群论"><a href="#群论" class="headerlink" title="群论"></a>群论</h2><h3 id="有关自同构群的一些问题"><a href="#有关自同构群的一些问题" class="headerlink" title="有关自同构群的一些问题"></a>有关自同构群的一些问题</h3><h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><p>若G是无限循环群，则$ AutG $为2阶循环群</p>
+<span id="more"></span>
+<h5 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h5><p>设$ G $是由$g \in G$生成的无限循环群，则G只有两个生成元$ g $和$ g^{-1} $，而自同构将生成元变成生成元，且循环群上的自同构由它在生成元上的作用唯一确定<br>                因此，若$ \sigma\in Aut G $，则    $ \sigma(g)=g $或$ \sigma(g)=g^{-1} $<br>                若$ \sigma(g)=g $，则$ \sigma $是恒等自同构<br>                若$ \sigma(g)=g^{-1} $，则由无限循环群是Abel群知$ \sigma $也是自同构<br>                综上所述$ |Aut G|=2 $</p>
+<h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><p>记$ U_n  $是$\mathbb{Z}_n$中关于乘法的可逆元的全体构成的群，设G是n阶循环群，证明：$ Aut~G\cong U_n $</p>
+<h5 id="证明：-1"><a href="#证明：-1" class="headerlink" title="证明："></a>证明：</h5><p>设$a$是G的生成元，则$ a^k $是G的生成元$ \iff (k,n)=1$这样的k有$ \varphi(n) $个，将小于n且与n互素的正整数记为$ k_1,k_2,\cdots,k_{\varphi(n)} $，其中$ k_1=1 $，则$ a^{k_i}~(i=1,\cdots,\varphi(n)) $是G的全部生成元<br>                根据自同构将生成元变为生成元，且由它在生成元上的作用唯一确定</p>
+<p>因此    $\forall \tau\in Aut~G, \exists i\in \{1,\cdots,\varphi(n)\} $，使得$ \tau(a)=a^{k_i} $，反之，对任意给定的$ k_i $，定义$ \tau_i $，满足$ \tau_i(a^l)=a^{k_il} ,\forall l\in \mathbb{Z}$，则容易验证$ \tau_i $是G上的自同构，因此$ Aut~G=\{\tau_1,\cdots,\tau_{\varphi(n)}\} $<br>                定义映射$ f: $</p>
+<script type="math/tex; mode=display">
+f:Aut~G\longrightarrow U_n</script><script type="math/tex; mode=display">
+\tau_i\longmapsto \overline{k_i}</script><p>则有$ \tau_i=\tau_j \iff \tau_i(a)=\tau_j(a) \iff a^{k_i}=a^{k_j}\iff n|k_i-k_j\iff \overline{k_i}=\overline{k_j}$<br>                可见$ f $是良定义的且是单射，又$ |Aut~G|=|U_n| $，故$ f $也是满射，故为双射</p>
+<p>此外，由于$ \tau_i\tau_j(a)=\tau_i(a^{k_j})=a^{k_ik_j} $，而$ \overline {k_i},\overline {k_j}\in U_n $，故由$ U_n $关于乘法构成群知$ \exists s\in  \{1,\cdots,\varphi(n)\}$，使得$ \overline {k_ik_j}=\overline {k_s} $，故$ \tau_i\tau_j(a)=a^{k_s} $，故</p>
+<script type="math/tex; mode=display">
+f(\tau_i\tau_j)=\overline {k_s}=\overline {k_ik_j}=\overline {k_i}\overline {k_j}=f(\tau_i)f(\tau_j)</script><p>可见$ f $是同态<br>                综上，$ f $是同构，故$ Aut~G\cong U_n $</p>
+<h4 id="问题三："><a href="#问题三：" class="headerlink" title="问题三："></a>问题三：</h4><p>试决定$Aut~ \mathbb{Z}_6$</p>
+<h5 id="解："><a href="#解：" class="headerlink" title="解："></a>解：</h5><p>由上题结果知$Aut~ \mathbb{Z}_6\cong U=\{\bar 1,\bar 5\}$<br>因此$ |Aut~G|=2 $，则$ Aut~G=\{\sigma,\tau\} $，其中$ \sigma $是恒等自同构，$\tau  $满足$ \tau(\bar a)=\overline{5a} $</p>
+<h4 id="问题四："><a href="#问题四：" class="headerlink" title="问题四："></a>问题四：</h4><p>设$ p $是素数，求$ Aut ~\mathbb{Z}_{p^n} $，(其中$ n\in \mathbb{N}^* $)的阶数</p>
+<h5 id="解：-1"><a href="#解：-1" class="headerlink" title="解："></a>解：</h5><p>由第二题结果知，$ Aut ~\mathbb{Z}_{p^n}\cong U_{p^n} $，而$ \bar a\in U_{p^n} \iff (a,p^n)=1$</p>
+<p>这样的$ a $有$\varphi(p^n)= p^n-p^{n-1}\text{个} $(其中$ \varphi(n) $是$ Euler $函数，且$ (a,p^n)\neq 1 \iff p|a$小于$ p^n $且能被p整除的正整数有$ p,2p,\cdots,(p^{n-1}-1)p $，共$ p^{n-1}-1$个，所以$ \varphi(p^n)=p^n-1-(p^{n-1}-1)=p^n-p^{n-1} $)，故$ |Aut ~\mathbb{Z}_{p^n}|= |U_{p^n}|=p^n-p^{n-1} $</p>
+<h4 id="问题五："><a href="#问题五：" class="headerlink" title="问题五："></a>问题五：</h4><p>设G是群，$ Inn~G $是G的内自同构群，C是G的中心，证明：<br>        (1)$ Inn~G \lhd Aut~G$<br>        (2)$ Inn~G\cong G/C $</p>
+<h5 id="证明：-2"><a href="#证明：-2" class="headerlink" title="证明："></a>证明：</h5><p>(1)<br>                $ \forall a,b\in G $，则$ \varphi_a:x\longmapsto axa^{-1},\varphi_b:x\longmapsto bxb^{-1} $分别是由$ a,b $诱导的内自同构<br>                显然有$ \varphi_a\varphi_b=\varphi_{ab},\varphi_a^{-1}=\varphi_{a^{-1}} $，故$ Inn~G $是$ Aut~G $的子群<br>                $ \forall f\in Aut~G ,f\varphi_a f^{-1}(x)=f(\varphi_a f^{-1}(x))=f(af^{-1}(x)a^{-1})=f(a)xf(a)^{-1}=\varphi_{f(a)}(x)$即$ f\varphi_a f^{-1}=\varphi_{f(a)}\in Inn~G $，故    $ Inn~G \lhd Aut~G$<br>                (2)作映射$ \phi: $</p>
+<script type="math/tex; mode=display">
+\phi:G\longrightarrow Inn~G</script><script type="math/tex; mode=display">
+a\longmapsto \varphi_a</script><p>显然$ \phi $是满同态，且$ Ker\phi=\{a\in G|\varphi_a(x)=x,\forall x\in G\}=\{a\in G|ax=xa,\forall x\in G\}=C $<br>                由群同态基本定理知，$ G/C\cong Inn~G $</p>
+<h4 id="问题六："><a href="#问题六：" class="headerlink" title="问题六："></a>问题六：</h4><p>设G是有限群，且G中有元素$ a,a^2\neq e $，求证$ |Aut ~G|&gt;1 $</p>
+<h5 id="证明：-3"><a href="#证明：-3" class="headerlink" title="证明："></a>证明：</h5><p>方法一：<br>                反证，假设$ |Aut ~G|\le 1 $，由于恒等自同构$ id\in Aut ~G $，故$ |Aut ~G|= 1 $，而$ Inn~G \lhd Aut~G $，故$ |Inn~G|=1 $，再由$ Inn~G\cong G/C $知$|G/C|=1  $，因此$ G=C $，G是交换群</p>
+<p>因此，映射$ \varphi:x\longmapsto x^{-1} $也是G上的自同构，由$ |Aut ~G|= 1 $知$ \varphi=id $，即$ \forall a\in G,a^{-1}=a$，即$ a^2=e $，与条件矛盾<br>                因此$ |Aut ~G|&gt;1 $<br>                方法二：<br>                情形一：G是交换群，则映射$ \varphi:x\longmapsto x^{-1} $也是G上的自同构，由于$\exists a\in G,a^2\neq e $</p>
+<p>故$ \varphi \neq id $，所以$ |Aut ~G|&gt;1 $<br>                情形二：G是非交换群，则$ \exists b\in G-C $，则映射$ \varphi_b:x\longmapsto bxb^{-1} $也是G上的自同构</p>
+<p>且$ \varphi_b\neq id $，所以$ |Aut ~G|&gt;1 $<br>                综上，$ |Aut ~G|&gt;1 $</p>
+<h4 id="问题七："><a href="#问题七：" class="headerlink" title="问题七："></a>问题七：</h4><p>设G是有限群且$ |Aut ~G|=1 $，证明：$ |G|\le 2 $</p>
+<h5 id="证明：-4"><a href="#证明：-4" class="headerlink" title="证明："></a>证明：</h5><p>由于$ |Aut ~G|= 1 $，而$ Inn~G \lhd Aut~G $，故$ |Inn~G|=1 $，再由$ Inn~G\cong G/C $知$|G/C|=1  $，因此$ G=C $，G是交换群，因此，映射$ \varphi:x\longmapsto x^{-1} $也是G上的自同构，由$ |Aut ~G|= 1 $知$ \varphi=id $，即$ \forall a\in G,a^{-1}=a$，即$ a^2=e $</p>
+<p>因此若$ |G|&gt;2 $，则G必然不是循环群(否则G有阶为$ |G|&gt;2 $的元素，与$ \forall a\in G,a^{2}=e$矛盾)，设$ a_1,a_2,\cdots,a_n~(n\ge 2) $是G的最小生成元组，由G是交换群及$ \forall a\in G,a^{2}=e$知G中任意元素可以唯一的写成$ a_1^{\epsilon_1}a_2^{\epsilon_2}\cdots a_n^{\epsilon_n} $的形状($ \epsilon_i=0\text{或}1 $)<br>                做G到G的映射$ \sigma: $</p>
+<script type="math/tex; mode=display">
+\sigma:G\longrightarrow G</script><script type="math/tex; mode=display">
+                a_1^{\epsilon_1}a_2^{\epsilon_2}\cdots a_n^{\epsilon_n}\longmapsto a_2^{\epsilon_1}a_1^{\epsilon_2}\cdots a_n^{\epsilon_n}</script><p>容易验证$ \sigma $是G上的自同构，即$ \sigma\in Aut~G $，且$ \sigma(a_1)=a_2\neq a_1 $，故$ \sigma\neq id $，可见$ |Aut~G|&gt;1 $，矛盾.因此，必有$ |G|\le 2 $</p>
+<h4 id="问题八："><a href="#问题八：" class="headerlink" title="问题八："></a>问题八：</h4><p>设G是有限Abel群，但不是循环群，证明：$ Aut~G $是非交换群</p>
+<h5 id="证明：-5"><a href="#证明：-5" class="headerlink" title="证明："></a>证明：</h5><p>设G的最小生成元组为$ a_1,a_2,\cdots,a_t $，由G不是循环群知$ t\ge 2 $</p>
+<p>由G是Abel群知，G中任意元素形如$ a_1^{m_1}a_2^{m_2}\cdots a_t^{m_t} $<br>                设$ a_1 $阶为$ m $，$ a_2 $阶为$ n $，断言$ (m,n)\neq 1 $<br>                否则，若$ (m,n)=1 $，则$ a_1a_2 $的阶为$ mn $，且$ \exists u,v\in \mathbb{Z} $，使得$ um+vn=1 $<br>                因此$ (a_1a_2)^{vn}=a_1^{1-um}a_2^vn=a_1 $，即$ a_1\in (a_1a_2) $，同理，$ a_2\in (a_1a_2) $，这与$ a_1,a_2,\cdots,a_t $是最小生成元组矛盾 (这里$(a_1a_2)$表示由$a_1a_2$生成的循环群)<br>                故$ (m,n)=d\neq 1 $<br>                作自同态$ \varphi_1 $满足：$ \varphi_1(a_1)=a_1a_2^{k},\varphi_1(a_i)=a_i(i\ge 2)$，其中$ k=\dfrac{n}{d} $则$ \varphi_1 $可逆，其逆为$ \varphi_1^{-1} $，满足$ \varphi_1^{-1}(a_1)=a_1a_2^{-k},\varphi_1^{-1}(a_i)=a_i(i\ge 2) $，故$ \varphi_1\in Aut~G $<br>                作同态$ \varphi_2 $满足：$ \varphi_2(a_2)=a_1^sa_2,\varphi_2(a_i)=a_i(i\neq 2)$，其中$ s=\dfrac{m}{d} $，同理$ \varphi_2\in Aut~G $<br>                而$ \varphi_1\varphi_2(a_1)=\varphi_1(a_1)=a_1a_2^k $，$ \varphi_2\varphi_1(a_1)=\varphi_2(a_1a_2^k)=\varphi_2(a_1)\varphi_2(a_2)^k=a_1(a_1^sa_2)^k=a_1^{1+sk}a_2^k$<br>                可见$ \varphi_1\varphi_2(a_1)=\varphi_2\varphi_1(a_1)\iff a_1^{sk}=e\iff m|sk $<br>                同理$\varphi_1\varphi_2(a_2)=\varphi_2\varphi_1(a_2)\iff n|sk$<br>                因此$ \varphi_1\varphi_2=\varphi_2\varphi_1\iff sk $是m和n的公倍数<br>                而m和n的最小公倍数$ [m,n]=\dfrac{mn}{d}&gt;\dfrac{mn}{d^2}=sk $，故$ sk $不可能是m和n的公倍数<br>                因此$ \varphi_1\varphi_2\neq \varphi_2\varphi_1 $，即$ Aut~G $是非交换群</p>
+
+      
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="https://tuowang2002.github.io/2021/09/06/group6/">https://tuowang2002.github.io/2021/09/06/group6/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/%E7%BE%A4%E8%AE%BA/" rel="tag">群论</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2021/09/07/group7/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '有限Abel群是循环群的一些充要条件'}">Prev</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2021/09/05/group5/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '与商群有关的一类问题'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2024 Tuo Wang<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+</body>
+</html>
