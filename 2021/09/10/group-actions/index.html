@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>Group actions and some applications | 王拓的学术主页</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
+  <meta name="description" content="Abstract algebraGroup theoryGroup actions and some applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Group actions and some applications">
+<meta property="og:url" content="https://tuowang2002.github.io/2021/09/10/group-actions/index.html">
+<meta property="og:site_name" content="王拓的学术主页">
+<meta property="og:description" content="Abstract algebraGroup theoryGroup actions and some applications">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-17T07:38:08.385Z">
+<meta property="article:author" content="Tuo Wang">
+<meta property="article:tag" content="Group theory">
+<meta name="twitter:card" content="summary">
+
+  <meta name="keywords" content=",Group theory">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="王拓的学术主页">
+  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/2021/09/10/group-actions/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="王拓的学术主页">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <link rel="canonical" href="https://tuowang2002.github.io/2021/09/10/group-actions/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+
+  
+
+
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
+  
+
+
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">王拓的学术主页</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'Search'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="https://tuowang2002.github.io"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/cabbage.jpg" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">Tuo Wang</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>C&#39;estbon</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">Home</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">Archive</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2024/05/">May 2024<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/09/">September 2021<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">Category</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/AMP/">AMP<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">Tag</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Group-theory/" rel="tag">Group theory<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/pseudo-Lipschitz/" rel="tag">pseudo-Lipschitz<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">About</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a target="_blank" rel="noopener" href="http://math.wangtuo.co/travel/index.html" class="mdui-list-item mdui-ripple">旅游</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">Links</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        
+          <a href="javascript:;" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme mdui-ripple" style="justify-content: center;">No Links</a>
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-16.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">Group actions and some applications</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-09-10 / <i class="iconfont">&#xe601;</i> Tuo Wang &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <h1 id="Abstract-algebra"><a href="#Abstract-algebra" class="headerlink" title="Abstract algebra"></a>Abstract algebra</h1><h2 id="Group-theory"><a href="#Group-theory" class="headerlink" title="Group theory"></a>Group theory</h2><h3 id="Group-actions-and-some-applications"><a href="#Group-actions-and-some-applications" class="headerlink" title="Group actions and some applications"></a>Group actions and some applications</h3><span id="more"></span>
+<h4 id="Proposition-1"><a href="#Proposition-1" class="headerlink" title="Proposition 1"></a>Proposition 1</h4><p>Suppose that G acts on X through an action $\star$ .Let $g\in G$ . Define a map $f_g$ from X to X by $f_g(x)=g\star x$ . Then, $f_g\in Sym(X)$.</p>
+<h6 id="Proof"><a href="#Proof" class="headerlink" title="Proof:"></a>Proof:</h6><p>It is easy to verify.</p>
+<h4 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition 1"></a>Definition 1</h4><p>Suppose that G acts on X through an action $\star$ . Define a map $\rho$ from G to $Sym(X)$ by $\rho(g)=f_g$. It is easy to verify that $\rho$ is a homomorphism from G to $Sym(X)$. Such a homomorphism is called a <strong>permutation representation</strong> of G on X</p>
+<h4 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h4><p>Given an action $\star$ of G on X,we have a representation of G on X. Conversely, given any representation $\rho$ of G on X, we have an action $\star$ of G on X defined by $g\star x=\rho(g)(x)$ such that the corresponding representation is the same as $\rho$. (It is easy to verify.)</p>
+<p>Thus there is a faithful way to view an action as a representation , and a representation as an action , and they are related by</p>
+<script type="math/tex; mode=display">
+g\star x=\rho(g)(x)</script><h4 id="Definition-2"><a href="#Definition-2" class="headerlink" title="Definition 2"></a>Definition 2</h4><p>Let $\star$ be an action of G on X with the corresponding representation $\rho$ . Then the kernel of $\rho$ is</p>
+<script type="math/tex; mode=display">
+ker \rho=\{g\in G|\rho(g)=1_G\}=\{g\in G|\rho(g)(x)=x,\forall x\in X\}=\{g\in G|g\star x=x,\forall x\in X\}</script><p>Therefore , $\{g\in G|g\star x=x,\forall x\in X\}$ is a normal subgroup of G. This subgroup is called <strong>isotropy group or the stabilizer</strong> of the action $ \star$ of G on X , and it is denoted by $Stab(G,X)$</p>
+<p> By the fundamental theorem of  homomorphism , we have the following proposition.</p>
+<h4 id="Proposition-2"><a href="#Proposition-2" class="headerlink" title="Proposition 2"></a>Proposition 2</h4><p>$G/Stab(G,X)$ is isomorphic to the subgroup $\rho(G)$ of $Sym(X)$ , where $\rho$ is the corresponding representation.</p>
+<h4 id="Remark-1"><a href="#Remark-1" class="headerlink" title="Remark"></a>Remark</h4><p>Suppose that G acts on X through an action $\star$​ .Then we have</p>
+<script type="math/tex; mode=display">
+Stab(G,X)=\bigcap\limits_{x\in X}Stab(x)</script><p> where  $Stab(x)=\{g\in G|g\star x=x\}$ is the stabilizer of $x\in X$.</p>
+<h4 id="Definition-3"><a href="#Definition-3" class="headerlink" title="Definition 3"></a>Definition 3</h4><p>Let G be a group which acts on X through an action $\star$ . An element $x\in X$ is called a <strong>fixed point </strong> if $g\star x=x$ , for all $g\in G$ .  Thus , x is a fixed point if and only if $Stab(x)=G$ , or equivalently ,$Orb(x)=\{x\}$. The set of all fixed points of the action $\star$ is denoted by $X^G$ ,and it is called the <strong>fixed point set </strong>of the action. Thus $X^G=\{x\in X|g\star x=x,\forall g\in G\}$.</p>
+<h4 id="Remark-2"><a href="#Remark-2" class="headerlink" title="Remark"></a>Remark</h4><p>An element $x\in X$ is a fixed point if and only if the orbit $Orb(x)$ is singleton . Thus $X^G$ is the union of all those orbits which are singletons.</p>
+<h4 id="Proposition-3"><a href="#Proposition-3" class="headerlink" title="Proposition 3"></a>Proposition 3</h4><p>Let A be a set obtained by choosing one and only one member from each orbit different from singleton. Suppose that X is finite , then we have the equation</p>
+<script type="math/tex; mode=display">
+|X|=|X^G|+\sum\limits_{x\in A}[G:Stab(x)]</script><p>Here again ,each term under summation in $R.H.S. $​ is greater than 1 and divides |G|</p>
+<p>The equation is also called the <strong>class equation or class formula</strong> for the action $\star$.</p>
+<h6 id="Proof-1"><a href="#Proof-1" class="headerlink" title="Proof:"></a>Proof:</h6><p>If $x\in A$ ,then $Orb(x)\neq \{x\}$. Further, $Orb(x)\cap Orb(y)=\varnothing$ for all $x,y\in A,x\neq y$.</p>
+<p>Since X is union of all orbits,</p>
+<script type="math/tex; mode=display">
+X=X^G\bigcup(\bigcup\limits_{x\in A}Orb(x))</script><p>Since distinct orbits are disjoint and $|Orb(x)|=[G:Stab(x)]$ , we have</p>
+<script type="math/tex; mode=display">
+|X|=|X^G|+\sum\limits_{x\in A}[G:Stab(x)]</script><p>Now, we give some examples and applications to the structure theory of finite groups.</p>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h4><p>Let G be a group and X=G . Define $g\star x=gxg^{-1},g,x\in G$. It is easy to verify that $\star$ is an action of G on G. This action is called the <strong>inner conjugation</strong> of G on G. </p>
+<p>The isotropy group of the inner conjugation of G on G at x is $Stab(x)=\{g\in G|gxg^{-1}=x\}=\{g\in G|gx=xg\}=C_{(x)}$ , in which $C_{(x)}$ is the centralizer of x in G. </p>
+<p>The isotropy group of the inner conjugation of G on G  is $ker\rho =Stab(G,X)=\{g\in G|gxg^{-1}=x,\forall x\in G\}=\{g\in G|gx=xg\}=C$ , in which $\rho$ is the corresponding representation , C is the center of G. The representation $\rho$ determined by the inner conjugation of G on G is given by $\rho(g)=f_g$ , where $f_g$ is the inner automorphism of G determined by g. Thus , $\rho(G)$ is the group $Inn(G)$​ of all inner automorphisms of G. By the fundamental theorem of homomorphism ,we have the following:</p>
+<script type="math/tex; mode=display">
+G/C\cong Inn(G)</script><p>The orbit through $x\in G$​ of the inner conjugation of G on G is the set $Orb(x)=\{gxg^{-1}|g\in G\}$​​​ of all conjugates of x in G ,which is also called the conjugacy class of G determined by x.</p>
+<p>The fixed point set of the inner conjugation of G on G is the set $G^G=\{x\in G|gxg^{-1}=x,\forall g\in G\}=C$ .</p>
+<p>Let A be a set obtained by choosing one and only member from each orbit different from singleton . By the class formula,we have the following:</p>
+<script type="math/tex; mode=display">
+|G|=|C|+\sum\limits_{x\in A}[G:Stab(x)]</script><p>This equation is also called the <strong>classical class equation</strong> of G.</p>
+<h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h4><p>Let G be a group and X the set S(G) of all subgroups of G . Define $g\star H=gHg^{-1},g\in G$. It is easy to verify that $\star$ is an action of G on S(G). This action is called the <strong>inner conjugation of G on subgroups of G.</strong> </p>
+<p>The isotropy group of the inner conjugation of G on subgroups of G at H is $Stab(H)=\{g\in G|gHg^{-1}=H\}=\{g\in G|gH=xH\}=N(H)$ , in which $N(H)$ is the normalizer of x in G. </p>
+<p>The orbit through $H\in S(G)$ of the inner conjugation of G on subgroups of G is the set $Orb(H)=\{gHg^{-1}|g\in G\}$ of all conjugates of H in G ,which is also called the conjugacy class of G determined by H.</p>
+<p>The fixed point set of the inner conjugation of G on subgroups of G is the set $S(G)^G=\{H\in S(G)|gHg^{-1}=H,\forall g\in G\}=\{H\in S(G)|gH=Hg,\forall g\in G\}=\{H\in S(G)|H\lhd G\}$ ,which is the set of all normal subgroups of G.</p>
+<p>Let A be a set obtained by choosing one and only member from each orbit different from singleton . By the class formula,we have the following:</p>
+<script type="math/tex; mode=display">
+|S(G)|=|S(G)^G|+\sum\limits_{x\in A}[G:N(H)]</script><h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h4><p>Let G be a group and $X=G/^l H$ . Define $g\star xH=gxH,g,x\in G$. It is easy to verify that $\star$ is an action of G on $G/^lH$. This action is called the <strong>left multiplication</strong> of G on $G/^lH$. </p>
+<p>The isotropy group of the left multiplication of G on $G/^lH$ at $xH$ is $Stab(xH)=\{g\in G|gxH=xH\}=\{g\in G|x^{-1}gx\in H\}=xHx^{-1}$ </p>
+<p>The isotropy group of the left multiplication of G on $G/^lH$  is $ker\rho =Stab(G,G/^lH)=\bigcap\limits_{x\in G}Stab(xH)=\bigcap\limits_{x\in G}xHx^{-1}$ , in which $\rho$ is the corresponding representation . Thus , $\bigcap\limits_{x\in G}xHx^{-1}$ is a normal subgroup of G .  Further , it is the largest normal subgroup of G contained in H. This subgroup is called the <strong>core</strong> of H in G ,and it is denoted by $Core_G(H)$ . By the fundamental theorem of homomorphism , $G/Core_G(H)$ is isomorphic to a subgroup of $Sym(X)$.</p>
+<p>Now we apply the theory of group actions to the structure theory of finite groups.</p>
+<h4 id="Proposition-4"><a href="#Proposition-4" class="headerlink" title="Proposition 4"></a>Proposition 4</h4><p>Let G be a group of order $p^n,n\ge 1$ ,where p is a prime. Let H be a nontrivial subgroup of G. Then $H\cap C(G)\neq \{e\} $ . In particular, $C(G)\neq \{e\}$.</p>
+<h6 id="Proof-2"><a href="#Proof-2" class="headerlink" title="Proof:"></a>Proof:</h6><p>Since $H\lhd G$ , G acts on H through inner conjugation . The fixed point set</p>
+<script type="math/tex; mode=display">
+H^G=\{h\in H|ghg^{-1}=h,\forall g\in G\}=\{h\in H|gh=hg,\forall g\in G\}=H\cap C(G)</script><p> Let A be a set obtained by choosing one and only member from each orbit different from singleton , consider the class formula ,</p>
+<script type="math/tex; mode=display">
+p^r=|H|=|H\cap C(G)|+\sum\limits_{x\in A}[G:Stab(x)]</script><p>Each term under summation in $R.H.S. $ is greater than 1 and divides |G|</p>
+<p>Since $H\neq \{e\},r\ge 1$ .Thus , $L.H.S.$ is divisible by p and the second term in the $R.H.S.$ is also a multiple of p .  Since p divides $|H\cap C(G)|$ . Since  $ e\in H\cap C (G)$ .  $H\cap C(G)$ contains at least p elements.</p>
+<p>Taking H=G , we observe that $C(G)\neq \{e\}$.</p>
+<h4 id="Corollary"><a href="#Corollary" class="headerlink" title="Corollary"></a>Corollary</h4><p>Let G be a group of order $p^2$ , where p is a prime .  Then, G is abelian.</p>
+<h6 id="Proof-3"><a href="#Proof-3" class="headerlink" title="Proof:"></a>Proof:</h6><p>Consider $C(G)$ . By the above proposition ,|C(G)|=p or $p^2$ .  If $|C(G)|=p^2$ , then C(G)=G ,and so G is abelian. Now we show that $|C(G)|\neq p$ . </p>
+<p>Suppose that$|C(G)|= p$ , then $|G/C(G)|=p$ ,and so G is cyclic . Thus G is abelian ,and then G=C(G) . So $|C(G)|=|G|= p^2$  . This is a contradiction to the supposition.</p>
+<h4 id="Proposition-5"><a href="#Proposition-5" class="headerlink" title="Proposition 5"></a>Proposition 5</h4><p>Let G be a group of order $p^n,n\ge 1$ ,where p is a prime. Let H be a subgroup of G and $H\neq G$ . Then, $ H\neq N(H)$​ , where N(H) is the normalizer of H in G.</p>
+<h6 id="Proof-4"><a href="#Proof-4" class="headerlink" title="Proof:"></a>Proof:</h6><p>The proof is by induction on $n$ .</p>
+<p>If $n=1$ ,then G is prime cyclic . And then $H\neq G=N(H)$.</p>
+<p>Assume that the result is true for a group of order less than $p^n$. Let G be a group of order $p^{n}$ . </p>
+<p>If  $C(G)\nsubseteq H$ ，then there is an element $x\in C(G)$ but $x\notin H$ .  Since $xH=Hx,x\in N(H)$. Thus,$ H\neq N(H)$ . ​</p>
+<p>If $C(G)\subseteq H$ , consider the group $G/C(G)$ . By proposition 4 , $C(G)\neq \{e\}$ ,and then $|G/C(G)|&lt;p^{n}$ . By the induction hypothesis , for all subgroup $H/C(G)$ of $G/C(G), H\neq G$  ,we have $N(H/C(G))\neq H/C(G)$ . Then there is an element $x\in G-H$ ,such that $\overline{xHx^{-1}}=\overline H$ . By the correspondence theorem, we have $xHx^{-1}=H$ ,which implies that $x\in N(H), and,H\neq N(H)$.</p>
+<h4 id="Corollary-1"><a href="#Corollary-1" class="headerlink" title="Corollary"></a>Corollary</h4><p>Let G be a group of order $p^n,n\ge 1$ ,where p is a prime. Let H be a subgroup of G of order $p^{n-1}$. Then , H is a normal subgroup of G.</p>
+<h6 id="Proof-5"><a href="#Proof-5" class="headerlink" title="Proof:"></a>Proof:</h6><p>By the above proposition, $H\subset  N(H)$ and $H\neq N(H)$ . Since $|H|=p^{n-1}$ and N(H) is also a subgroup of G whose order is greater than $p^{n-1}$ and divides $p^n$. Thus,$|N(H)|=p^n$ . This shows that N(H)=G and $H\lhd G$.</p>
+<h4 id="Proposition-6"><a href="#Proposition-6" class="headerlink" title="Proposition 6"></a>Proposition 6</h4><p>Let G be a finite group and p the smallest prime dividing the order of G. Then, every subgroup of G of index p is a normal in G.</p>
+<h6 id="Proof-6"><a href="#Proof-6" class="headerlink" title="Proof:"></a>Proof:</h6><p>Let H be a subgroup of G of index p, where p is the smallest prime dividing the order of G. Then $G/^l H$ contains p elements. Consider the action $\star$ of G on  $G/^l H$ defined by $g\star xH=gxH$ . The isotropy group of this action is the $Core_G(H)$, which is the largest normal subgroup of G contained in H.  Also, $G/Core_G(H)$ is isomorphic to a subgroup of $Sym(G/^lH)\cong S_p$ . Since  $|G/Core_G(H)|=[G:H][H:Core_G(H)]=pq$ .  We have </p>
+<script type="math/tex; mode=display">
+pq|p!\Rightarrow q|(p-1)\cdots 1</script><p>Since p is the smallest prime dividing the order of G and q divides |G|, q=1 .  Thus $H=Core_G(H)\lhd G$</p>
+<h4 id="Corollary-2"><a href="#Corollary-2" class="headerlink" title="Corollary"></a>Corollary</h4><p>If G have no subgroups of index 2 .  Then ,every subgroup of index 3 must be normal in G.</p>
+<h6 id="Proof-7"><a href="#Proof-7" class="headerlink" title="Proof:"></a>Proof:</h6><p>Let H be a subgroup of G of index 3. Consider $Core_G(H)$ .By the fundamental theorem of homomorphism, $G/Core_G(H)$ is isomorphic to a subgroup of $Sym(G/^lH)\cong S_3$ . If $G/Core_G(H)$ is isomorphic to $S_3$ , since $S_3$ have a subgroup of index 2 , G must have a subgroup of index 2 (by the correspondence theorem), which contradiction to the hypothesis. Since $|G/Core_G(H)|=[G:H][H:Core_G(H)]\ge 3$ , then $|G/Core_G(H)|=3$ ,which implies that $H=Core_G(H)\lhd G$.</p>
+
+      
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="https://tuowang2002.github.io/2021/09/10/group-actions/">https://tuowang2002.github.io/2021/09/10/group-actions/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/Group-theory/" rel="tag">Group theory</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2024/05/14/pseudo-Lipschitz/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '伪Lipschitz函数及其性质'}">Prev</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2021/09/09/alternating-group/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'Some methods to prove that alternating group of degree 4 contains no  subgroup of order 6'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2024 Tuo Wang<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+</body>
+</html>
