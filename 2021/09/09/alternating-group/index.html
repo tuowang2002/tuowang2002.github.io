@@ -12,15 +12,15 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
-  <meta name="description" content="Some methods to prove that $A_4$ contains no  subgroup of order 6Definition 1Let $\sigma$ be a permutation in $S_n$ , write $\sigma$ as the product of disjoint cycles , and the form of $\sigma$ is sai">
+  <meta name="description" content="Some methods to prove that $A_4$ contains no  subgroup of order 6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Some methods to prove that alternating group of degree 4 contains no subgroup of order 6">
 <meta property="og:url" content="https://tuowang2002.github.io/2021/09/09/alternating-group/index.html">
 <meta property="og:site_name" content="王拓的学术主页">
-<meta property="og:description" content="Some methods to prove that $A_4$ contains no  subgroup of order 6Definition 1Let $\sigma$ be a permutation in $S_n$ , write $\sigma$ as the product of disjoint cycles , and the form of $\sigma$ is sai">
+<meta property="og:description" content="Some methods to prove that $A_4$ contains no  subgroup of order 6">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-17T07:43:38.106Z">
+<meta property="article:modified_time" content="2024-05-17T07:45:39.519Z">
 <meta property="article:author" content="Tuo Wang">
 <meta property="article:tag" content="Group theory">
 <meta name="twitter:card" content="summary">
@@ -192,9 +192,9 @@
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <h1 id="Some-methods-to-prove-that-A-4-contains-no-subgroup-of-order-6"><a href="#Some-methods-to-prove-that-A-4-contains-no-subgroup-of-order-6" class="headerlink" title="Some methods to prove that $A_4$ contains no  subgroup of order 6"></a>Some methods to prove that $A_4$ contains no  subgroup of order 6</h1><h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition 1"></a>Definition 1</h2><p>Let $\sigma$ be a permutation in $S_n$ , write $\sigma$ as the product of disjoint cycles , and the form of $\sigma$ is said to be $1^{\lambda_1}2^{\lambda_2}\cdots n^{\lambda_r}$ if there are $\lambda_r$ cycles of length $r$,($1\le r\le n$).</p>
+      <h1 id="Some-methods-to-prove-that-A-4-contains-no-subgroup-of-order-6"><a href="#Some-methods-to-prove-that-A-4-contains-no-subgroup-of-order-6" class="headerlink" title="Some methods to prove that $A_4$ contains no  subgroup of order 6"></a>Some methods to prove that $A_4$ contains no  subgroup of order 6</h1><span id="more"></span>
+<h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition 1"></a>Definition 1</h2><p>Let $\sigma$ be a permutation in $S_n$ , write $\sigma$ as the product of disjoint cycles , and the form of $\sigma$ is said to be $1^{\lambda_1}2^{\lambda_2}\cdots n^{\lambda_r}$ if there are $\lambda_r$ cycles of length $r$,($1\le r\le n$).</p>
 <h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><p>The form of the permutation $\sigma=(1\quad 2\quad 3)(4\quad 5) $ in $ S_7$ is $1^22^13^14^05^06^07^0=1^22^13^1$</p>
-<span id="more"></span>
 <h2 id="Definition-2"><a href="#Definition-2" class="headerlink" title="Definition 2"></a>Definition 2</h2><p>Let $\alpha,\beta\in S_n$. We said $\alpha$ and $\beta$ are  conjugate in $S_n$ if there exists a permutation $\sigma \in S_n$ such that $\sigma^{-1}\alpha \sigma=\beta$</p>
 <h2 id="Proposition-1"><a href="#Proposition-1" class="headerlink" title="Proposition 1"></a>Proposition 1</h2><p>Let $\sigma,\sigma’\in S_n$. Then, $\sigma$ and $\sigma’$ are conjugate in $S_n$ if and only if they have the same form.</p>
 <h6 id="Proof"><a href="#Proof" class="headerlink" title="Proof:"></a>Proof:</h6><p>If $\sigma$ and $\sigma’$ are conjugate in $S_n$,then there exists a permutation $\tau \in S_n$ such that $\tau^{-1}\sigma \tau=\sigma’$, write $\sigma$ as the product of disjoint cycles like this:</p>
@@ -324,5 +324,21 @@ H=H_0\cup H_i\cup H_5\quad 1\le i\le 4</script><p>However, the elements in $H_i$
   
 <script src="/custom.js"></script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
