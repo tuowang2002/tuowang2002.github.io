@@ -8,15 +8,19 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Archive: 2024/5 | 王拓的学术主页</title>
+  <title>神奇的矩阵之门 | 王拓的学术主页</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="王拓的学术主页">
-<meta property="og:url" content="https://tuowang2002.github.io/archives/2024/05/index.html">
+  <meta name="description" content="首先，我们给出如下结果。 定理1：设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，则矩阵方程 $AX&#x3D;XB$ 只有零解当且仅当矩阵 $A$ 与 $B$ 无公共特征值。 证明：先证充分性，设 $f(x)$ 是矩阵 $A$ 的特征多项式，则根据Cayley-Hamilton定理知 $f(A) &#x3D; 0$. 根据 $AX&#x3D;XB$ 知  A^2X &#x3D; A(AX) &#x3D; A(XB) &#x3D; (AX)B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神奇的矩阵之门">
+<meta property="og:url" content="https://tuowang2002.github.io/2024/05/18/matrix-equation/index.html">
 <meta property="og:site_name" content="王拓的学术主页">
+<meta property="og:description" content="首先，我们给出如下结果。 定理1：设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，则矩阵方程 $AX&#x3D;XB$ 只有零解当且仅当矩阵 $A$ 与 $B$ 无公共特征值。 证明：先证充分性，设 $f(x)$ 是矩阵 $A$ 的特征多项式，则根据Cayley-Hamilton定理知 $f(A) &#x3D; 0$. 根据 $AX&#x3D;XB$ 知  A^2X &#x3D; A(AX) &#x3D; A(XB) &#x3D; (AX)B">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-18T11:29:02.868Z">
+<meta property="article:modified_time" content="2024-05-18T12:34:26.309Z">
 <meta property="article:author" content="Tuo Wang">
 <meta name="twitter:card" content="summary">
 
@@ -26,7 +30,7 @@
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="王拓的学术主页">
-  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/archives/2024/05/">
+  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/2024/05/18/matrix-equation/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="王拓的学术主页">
@@ -34,7 +38,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="https://tuowang2002.github.io/archives/2024/05/index.html">
+    <link rel="canonical" href="https://tuowang2002.github.io/2024/05/18/matrix-equation/">
   
 
   
@@ -167,36 +171,64 @@
 </aside>
 
   <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
-  <div class="mdui-chip mdui-m-b-3">
-    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">place</i></span>
-    <span class="mdui-chip-title">Archive：2024/5</span>
-  </div>
-
-
-
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2024/05/18/matrix-equation/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-13.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">神奇的矩阵之门</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2024-05-18 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-19.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">神奇的矩阵之门</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2024-05-18 / <i class="iconfont">&#xe601;</i> Tuo Wang &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
         </div>
+      </div>
+      <div class="mdui-card-menu">
         
-      </header>
-    </a>
+        
+      </div>
+    </header>
     <div class="mdui-card-content mdui-typo">
+      <p>首先，我们给出如下结果。</p>
+<p><strong>定理1：</strong>设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，则矩阵方程 $AX=XB$ 只有零解当且仅当矩阵 $A$ 与 $B$ 无公共特征值。</p>
+<p><strong>证明：</strong>先证充分性，设 $f(x)$ 是矩阵 $A$ 的特征多项式，则根据Cayley-Hamilton定理知 $f(A) = 0$. 根据 $AX=XB$ 知</p>
+<script type="math/tex; mode=display">
+A^2X = A(AX) = A(XB) = (AX)B = (XB)B = XB^2.</script><p>依次类推，可由数学归纳法证明对任意的正整数 $k$，都有 $A^kX = XB^k$，进而</p>
+<script type="math/tex; mode=display">
+O = f(A)X = Xf(B).</script><p>欲证矩阵方程 $AX=XB$ 只有零解，只需证明 $f(B)$ 可逆。设 $g(x)$ 是矩阵 $B$ 的特征多项式，则根据Cayley-Hamilton定理知 $g(B) = 0$. 此外，根据矩阵 $A$ 与 $B$ 无公共特征值知 $(f,g) = 1$，从而存在多项式 $u(x),v(x)$ 使得</p>
+<script type="math/tex; mode=display">
+u(x)f(x)+v(x)g(x) = 1.</script><p>代入矩阵 $B$，可知</p>
+<script type="math/tex; mode=display">
+u(B)f(B) = u(B)f(B)+v(B)g(B) = I.</script><p>从而 $f(B)$ 可逆，故$X = O$.</p>
+<p>​    再证必要性，采用反证法，假设 $\lambda$ 是矩阵 $A$ 与 $B$ 的公共特征值，而 $B^T$ 与 $B$ 的特征值相同，因此 $\lambda$ 也是矩阵 $B^T$ 的特征值，设 $\alpha,\beta$ 分别是矩阵 $A$ 与 $B^T$ 的特征向量，令$X_0 = \alpha\beta^T\neq 0$，则</p>
+<script type="math/tex; mode=display">
+AX_0 = (A\alpha)\beta^T = (\lambda\alpha)\beta^T = \alpha(\lambda\beta)^T = \alpha(B^T\beta)^T = (\alpha\beta^T)B = X_0B.</script><p>可见 $X_0$ 是矩阵方程 $AX=XB$ 的非零解，矛盾，因此矩阵 $A$ 与 $B$ 无公共特征值。</p>
+<p><strong>注：</strong>此定理可将矩阵 $X$ 视作一个门，矩阵 $A$ 从这个门进入，矩阵 $B$ 从这个门出来，则这个门是非退化的当且仅当矩阵 $A$ 与 $B$ 有公共特征值。</p>
+<p>下面，我们介绍几个关于此定理的一些应用。</p>
+<p><strong>例1：</strong>设 $A,B$ 是 $n$ 阶矩阵，它们的特征值均大于 $0$，证明：$A^2 = B^2$ 当且仅当 $A = B$.</p>
+<p><strong>证明：</strong>充分性显然，下证必要性。根据 $A,B$ 的特征值均大于 $0$ 知矩阵 $A$ 与矩阵 $-B$ 无公共特征值，而根据</p>
+<script type="math/tex; mode=display">
+A(A-B) = A^2-AB = B^2-AB = (A-B)(-B)</script><p>及定理1知 $A-B = O$，即 $A = B$.</p>
+<p><strong>例2：</strong>设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，$V$ 是全体 $m\times n$ 阶矩阵构成的向量空间，定义映射 $\varphi: V\to V$，满足 $\varphi(X) = AX-XB$，则 $\varphi$ 是同构当且仅当矩阵 $A$ 与 $B$ 无公共特征值。</p>
+<p><strong>证明：</strong>显然 $\varphi$ 是线性映射，且根据 $V$ 是有限维线性空间知 $\varphi$ 是同构 $\iff\varphi$ 是单射$\iff$ker $\varphi = O\iff $矩阵方程 $AX=XB$ 只有零解$\iff$矩阵 $A$ 与 $B$ 无公共特征值。</p>
+<p><strong>例3：</strong>设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵， $A$ 与 $B$ 无公共特征值，且 $A,B$ 均可对角化，证明：矩阵 $M = \begin{pmatrix}A&amp;C\\O&amp;B\end{pmatrix}$ 可对角化。</p>
+<p><strong>证明：</strong>由例2可知，存在 $m\times n$ 阶矩阵 $X$，使得$AX-XB = C$， 由 $A,B$ 均可对角化，设$P^{-1}AP,Q^{-1}BQ$ 均为对角阵。根据</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}I&X\\O&I\end{pmatrix}^{-1} = \begin{pmatrix}I&-X\\O&I\end{pmatrix},</script><p>以及</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}I&X\\O&I\end{pmatrix}\begin{pmatrix}A&C\\O&B\end{pmatrix}\begin{pmatrix}I&-X\\O&I\end{pmatrix} = \begin{pmatrix}A&-AX+XB+C\\O&B\end{pmatrix} = \begin{pmatrix}A&O\\O&B\end{pmatrix},</script><p>可知</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}P^{-1}&O\\O&Q^{-1}\end{pmatrix}\begin{pmatrix}I&X\\O&I\end{pmatrix}\begin{pmatrix}A&C\\O&B\end{pmatrix}\begin{pmatrix}I&-X\\O&I\end{pmatrix}\begin{pmatrix}P&O\\O&Q\end{pmatrix} = \begin{pmatrix}P^{-1}AP&O\\O&Q^{-1}BQ\end{pmatrix}</script><p>是对角阵。即取</p>
+<script type="math/tex; mode=display">
+R = \begin{pmatrix}I&-X\\O&I\end{pmatrix}\begin{pmatrix}P&O\\O&Q\end{pmatrix},</script><p>有 $R^{-1}MR$ 是对角阵。</p>
+
       
-        首先，我们给出如下结果。
-定理1：设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，则矩...……
-      
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2024/05/18/matrix-equation/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="https://tuowang2002.github.io/2024/05/18/matrix-equation/">https://tuowang2002.github.io/2024/05/18/matrix-equation/</a>
+      </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
@@ -204,38 +236,27 @@
       
       
     </footer>
+    
   </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2024/05/14/pseudo-Lipschitz/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-14.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">伪Lipschitz函数及其性质</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2024-05-14 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
-        </div>
-        
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        Here's something encrypted, password is required to continue reading.……
-      
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2024/05/14/pseudo-Lipschitz/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/AMP/">AMP</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/pseudo-Lipschitz/" rel="tag">pseudo-Lipschitz</a>
-      
-    </footer>
-  </article>
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2024/05/14/pseudo-Lipschitz/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '伪Lipschitz函数及其性质'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
 
 
 
