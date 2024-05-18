@@ -108,7 +108,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/archives/2024/05/">May 2024<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2022/04/">April 2022<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/09/">September 2021<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2024/05/">May 2024<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2022/11/">November 2022<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2022/04/">April 2022<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2021/09/">September 2021<span class="mdui-ripple sidebar_archives-count">2</span></a>
         
       </div>
     </div>
@@ -121,7 +121,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/categories/AMP/">AMP<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">高等代数<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/AMP/">AMP<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/PDE/">PDE<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">高等代数<span class="mdui-ripple sidebar_archives-count">1</span></a>
         
       </div>
     </div>
@@ -134,7 +134,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/tags/Group-theory/" rel="tag">Group theory<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Quotient-Space/" rel="tag">Quotient Space<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/pseudo-Lipschitz/" rel="tag">pseudo-Lipschitz<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Group-theory/" rel="tag">Group theory<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/PDE/" rel="tag">PDE<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Quotient-Space/" rel="tag">Quotient Space<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/pseudo-Lipschitz/" rel="tag">pseudo-Lipschitz<span class="mdui-ripple sidebar_archives-count">1</span></a>
         
       </div>
     </div>
@@ -174,7 +174,7 @@
   <article class="mdui-card mdui-m-b-5 mdui-hoverable">
     <a href="/2024/05/14/pseudo-Lipschitz/">
       <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-13.png" style="max-height: 240px;">
+        <img src="/images/random/material-6.png" style="max-height: 240px;">
         <div class="mdui-card-media-covered">
           <div class="mdui-card-primary">
             <div class="mdui-card-primary-title">伪Lipschitz函数及其性质</div>
@@ -203,9 +203,48 @@
   </article>
 
   <article class="mdui-card mdui-m-b-5 mdui-hoverable">
+    <a href="/2022/11/01/PDE/">
+      <header class="mdui-card-media mdui-ripple">
+        <img src="/images/random/material-19.png" style="max-height: 240px;">
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">一个PDE问题</div>
+            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-11-01 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
+          </div>
+        </div>
+        
+      </header>
+    </a>
+    <div class="mdui-card-content mdui-typo">
+      
+        Problem考虑如下方程
+
+\begin{align}
+-\Delta u + \sin |x| \ u(x) &= (N + 1)|x| \cos (\pi |x|)    ,\quad x\in B\tag{1}\\
+u(x) &= 0, \quad x\in \partial B\tag{2}
+\end{align}其中 $B$ 为$\mathbb{R}^N\ (N\ge 3)$中的单位球体，设$u\in C^2(\overline B)$为问题$(1)-(2)$ 的解，证明：
+
+\Big|\dfrac{\partial u}{\partial \nu}(x)\Big|\le 1,\quad x\in \partial B其中 $\nu$ 为$\partial B$的单位外法向量
+注：原题让证明 $\frac{\partial u}{\partial \nu}(x)\ge 1,\ x\in \partial B$ 是不可能的……
+      
+    </div>
+    <div class="mdui-text-center">
+      <a href="/2022/11/01/PDE/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/PDE/">PDE</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/PDE/" rel="tag">PDE</a>
+      
+    </footer>
+  </article>
+
+  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
     <a href="/2022/04/02/quotient-space/">
       <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-5.png" style="max-height: 240px;">
+        <img src="/images/random/material-16.png" style="max-height: 240px;">
         <div class="mdui-card-media-covered">
           <div class="mdui-card-primary">
             <div class="mdui-card-primary-title">商空间理论在矩阵秩的不等式中的应用</div>
@@ -236,7 +275,7 @@
   <article class="mdui-card mdui-m-b-5 mdui-hoverable">
     <a href="/2021/09/10/group-actions/">
       <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-4.png" style="max-height: 240px;">
+        <img src="/images/random/material-17.png" style="max-height: 240px;">
         <div class="mdui-card-media-covered">
           <div class="mdui-card-primary">
             <div class="mdui-card-primary-title">Group actions and some applications</div>

@@ -8,25 +8,30 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Archive: 2022 | 王拓的学术主页</title>
+  <title>一个PDE问题 | 王拓的学术主页</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="王拓的学术主页">
-<meta property="og:url" content="https://tuowang2002.github.io/archives/2022/index.html">
+  <meta name="description" content="Problem考虑如下方程  \begin{align} -\Delta u + \sin |x| \ u(x) &amp;&#x3D; (N + 1)|x| \cos (\pi |x|)    ,\quad x\in B\tag{1}\\ u(x) &amp;&#x3D; 0, \quad x\in \partial B\tag{2} \end{align}其中 $B$ 为$\mathbb{R}^N\ (N\ge 3)$中的单位球">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个PDE问题">
+<meta property="og:url" content="https://tuowang2002.github.io/2022/11/01/PDE/index.html">
 <meta property="og:site_name" content="王拓的学术主页">
+<meta property="og:description" content="Problem考虑如下方程  \begin{align} -\Delta u + \sin |x| \ u(x) &amp;&#x3D; (N + 1)|x| \cos (\pi |x|)    ,\quad x\in B\tag{1}\\ u(x) &amp;&#x3D; 0, \quad x\in \partial B\tag{2} \end{align}其中 $B$ 为$\mathbb{R}^N\ (N\ge 3)$中的单位球">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-18T04:47:27.769Z">
 <meta property="article:author" content="Tuo Wang">
+<meta property="article:tag" content="PDE">
 <meta name="twitter:card" content="summary">
 
-  <meta name="keywords" content="">
+  <meta name="keywords" content=",PDE">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="王拓的学术主页">
-  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/archives/2022/">
+  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/2022/11/01/PDE/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="王拓的学术主页">
@@ -34,7 +39,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="https://tuowang2002.github.io/archives/2022/index.html">
+    <link rel="canonical" href="https://tuowang2002.github.io/2022/11/01/PDE/">
   
 
   
@@ -167,43 +172,119 @@
 </aside>
 
   <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
-  <div class="mdui-chip mdui-m-b-3">
-    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">place</i></span>
-    <span class="mdui-chip-title">Archive：2022/</span>
-  </div>
-
-
-
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2022/11/01/PDE/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-13.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">一个PDE问题</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-11-01 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-14.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">一个PDE问题</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-11-01 / <i class="iconfont">&#xe601;</i> Tuo Wang &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
         </div>
+      </div>
+      <div class="mdui-card-menu">
         
-      </header>
-    </a>
+        
+      </div>
+    </header>
     <div class="mdui-card-content mdui-typo">
-      
-        Problem考虑如下方程
-
+      <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>考虑如下方程</p>
+<script type="math/tex; mode=display">
 \begin{align}
 -\Delta u + \sin |x| \ u(x) &= (N + 1)|x| \cos (\pi |x|)    ,\quad x\in B\tag{1}\\
 u(x) &= 0, \quad x\in \partial B\tag{2}
-\end{align}其中 $B$ 为$\mathbb{R}^N\ (N\ge 3)$中的单位球体，设$u\in C^2(\overline B)$为问题$(1)-(2)$ 的解，证明：
-
-\Big|\dfrac{\partial u}{\partial \nu}(x)\Big|\le 1,\quad x\in \partial B其中 $\nu$ 为$\partial B$的单位外法向量
-注：原题让证明 $\frac{\partial u}{\partial \nu}(x)\ge 1,\ x\in \partial B$ 是不可能的……
+\end{align}</script><p>其中 $B$ 为$\mathbb{R}^N\ (N\ge 3)$中的单位球体，设$u\in C^2(\overline B)$为问题$(1)-(2)$ 的解，证明：</p>
+<script type="math/tex; mode=display">
+\Big|\dfrac{\partial u}{\partial \nu}(x)\Big|\le 1,\quad x\in \partial B</script><p>其中 $\nu$ 为$\partial B$的单位外法向量</p>
+<p><strong>注：</strong>原题让证明 $\frac{\partial u}{\partial \nu}(x)\ge 1,\ x\in \partial B$ 是不可能的</p>
+<span id="more"></span>
+<h2 id="一些简单的计算准备"><a href="#一些简单的计算准备" class="headerlink" title="一些简单的计算准备"></a>一些简单的计算准备</h2><p><strong>引理1</strong></p>
+<p>记$g(x) = |x|^k,\  x\in B$</p>
+<p>（1）</p>
+<script type="math/tex; mode=display">
+\Delta g = k(k+N-2)|x|^{k-2}</script><p> 其中$\Delta$为Laplace算子</p>
+<p>（2）</p>
+<script type="math/tex; mode=display">
+\dfrac{\partial g}{\partial \nu}(x) = k,\quad x\in \partial B</script><p>其中 $\nu$ 为$\partial B$的单位外法向量</p>
+<p><strong>证明：</strong>The proof is left as an exercise for the reader.</p>
+<p>下面开始对原问题的证明，首先观察到$(1)$ 中的$(N+1)$，因此我们考虑$|x|^3$，于是得到了如下的相对精确的估计</p>
+<h2 id="对解的估计"><a href="#对解的估计" class="headerlink" title="对解的估计"></a>对解的估计</h2><p><strong>引理2</strong></p>
+<p>如上Problem中的 $u\in C^2(\overline B)$ 的解，有如下估计式成立</p>
+<script type="math/tex; mode=display">
+|u(x)|\le \dfrac{1-|x|^3}{3},\quad x\in \overline{B}</script><p><strong>证明：</strong></p>
+<p>定义线性椭圆算子</p>
+<script type="math/tex; mode=display">
+\mathcal{L} u = -\Delta u + \sin |x| \ u(x),\quad x\in B</script><p>（1）首先我们证明：</p>
+<script type="math/tex; mode=display">
+u(x)\le \dfrac{1-|x|^3}{3},\quad x\in \overline{B}</script><p>令 $v(x) = \dfrac{1-|x|^3}{3}$，我们有 $v(x)\ge 0,\ \Delta v = -(N+1)|x|$</p>
+<script type="math/tex; mode=display">
+\mathcal{L} v =  -\Delta v + \sin |x| \ v(x) = (N+1)|x|+\sin |x| \ v(x)\ge  (N+1)|x|\ge (N + 1)|x| \cos (\pi |x|) = \mathcal{L} u</script><p>且</p>
+<script type="math/tex; mode=display">
+v(x) = u(x) = 0,\quad x\in \partial B</script><p>根据比较原理，我们有</p>
+<script type="math/tex; mode=display">
+v(x)\ge u(x),\quad x\in \overline{B}</script><p>故（1）得证</p>
+<p>（2）其次我们证明：</p>
+<script type="math/tex; mode=display">
+u(x)\ge \dfrac{|x|^3-1}{3},\quad x\in \overline{B}</script><p>令 $w(x) = \dfrac{|x|^3-1}{3}$，我们有 $v(x)\le 0,\ \Delta w = (N+1)|x|$</p>
+<script type="math/tex; mode=display">
+\mathcal{L} w =  -\Delta w + \sin |x| \ w(x) = -(N+1)|x|+\sin |x| \ w(x)\le  -(N+1)|x|\le -(N + 1)|x| \cos (\pi |x|) = \mathcal{L} u</script><p>且</p>
+<script type="math/tex; mode=display">
+w(x) = u(x) = 0,\quad x\in \partial B</script><p>根据比较原理，我们有</p>
+<script type="math/tex; mode=display">
+u(x)\ge w(x),\quad x\in \overline{B}</script><p>故（2）得证</p>
+<h2 id="对Problem的证明"><a href="#对Problem的证明" class="headerlink" title="对Problem的证明"></a>对Problem的证明</h2><p><strong>证明：</strong></p>
+<p>由于</p>
+<script type="math/tex; mode=display">
+\dfrac{\partial v}{\partial \nu}(x) = -1,\quad \dfrac{\partial w}{\partial \nu}(x) = 1,\quad x\in \partial B</script><p>一方面，对任意的$x\in \partial{B}$</p>
+<script type="math/tex; mode=display">
+\dfrac{\partial u}{\partial \nu}(x) = \lim\limits_{\sigma\to 0^+}\dfrac{u(x)-u(x-\sigma \nu)}{\sigma}\ge \lim\limits_{\sigma\to 0^+}\dfrac{v(x)-v(x-\sigma \nu)}{\sigma}=\dfrac{\partial v}{\partial \nu}(x)=-1</script><p>另一方面，对任意的$x\in \partial{B}$</p>
+<script type="math/tex; mode=display">
+\dfrac{\partial u}{\partial \nu}(x) = \lim\limits_{\sigma\to 0^+}\dfrac{u(x)-u(x-\sigma \nu)}{\sigma}\le \lim\limits_{\sigma\to 0^+}\dfrac{w(x)-w(x-\sigma \nu)}{\sigma}=\dfrac{\partial w}{\partial \nu}(x)=1</script><p>因此</p>
+<script type="math/tex; mode=display">
+\Big|\dfrac{\partial u}{\partial \nu}(x)\Big|\le 1,\quad x\in \partial B</script><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>通过此题可以大致得出这一类问题的证明方法，其中通过引理1的计算和观察是比较重要的</li>
+<li>本文同时证明了原题中$u(x)\le 1$的部分，并给出了对解得一个更加精确的估计</li>
+</ul>
+<h2 id="更进一步的估计"><a href="#更进一步的估计" class="headerlink" title="更进一步的估计"></a>更进一步的估计</h2><p><strong>以下证明来自崔华溢同学</strong></p>
+<p><strong>引理3</strong></p>
+<p>Laplace算子具有正交变换的不变性，即对任意正交矩阵 $T$ 使得$x = Ty$，则$\Delta_x u(x) = \Delta_y u(y)$ </p>
+<p><strong>证明</strong>：</p>
+<p>考虑Hessian矩阵，注意到Laplace算子为Hessian矩阵的迹，以及矩阵的迹是相似变化下的不变量立得</p>
+<p><strong>引理4</strong></p>
+<p>如上Problem的解在正交变化下不变，进而在$\partial B$上$\dfrac{\partial u}{\partial \nu}$处处相等</p>
+<p><strong>证明：</strong>由引理3以及向量范数在正交变换下不变知方程（1）在正交变换下不变，在由解得唯一性立得</p>
+<p><strong>引理5</strong></p>
+<p>如上Problem的解$u(x)$满足</p>
+<script type="math/tex; mode=display">
+u(x)\ge |x|^2-1</script><p><strong>证明：</strong></p>
+<p>读者自证不难</p>
+<p><strong>对方向导数下界更进一步的估计</strong></p>
+<script type="math/tex; mode=display">
+\dfrac{\partial u}{\partial \nu}(x)\ge 1-\dfrac{2}{N(N+2)},\quad x\in \partial B</script><p><strong>证明：</strong></p>
+<p>根据散度定理</p>
+<script type="math/tex; mode=display">
+\int_{\partial B}\dfrac{\partial u}{\partial \nu}(x)\ dS = \int_B \Delta u(x) dx</script><p>因此，对方程（1）两边在B上积分，并利用散度定理得</p>
+<script type="math/tex; mode=display">
+-\int_{\partial B}\dfrac{\partial u}{\partial \nu}(x)\ dS +\int_B \sin{|x|}\ u(x) dx = (N+1)\int_B |x|\cos(\pi |x|)dx</script><p>记$\omega_N$为单位球B的体积，结合引理4，引理5得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+N\omega_N\dfrac{\partial u}{\partial \nu} &\ge \int_B \sin{|x|}\ (|x|^2-1)dx-(N+1)\int_B |x|\cos(\pi |x|)dx\\
+&=N\omega_N\int_0^1\sin r\  (r^2-1)r^{N-1}dr-N\omega_N (N+1)\int_0^1 r^N \cos(\pi r)dr\\
+&=N\omega_N[1+\int_0^1\pi \sin(\pi r)r^{N+1}dr-\int_0^1(1-r^2)r^{N-1}\sin rdr]\\
+&\ge  N\omega_N[1-\int_0^1(1-r^2)r^{N-1}dr]\\
+&\ge N\omega_N[1-\dfrac{2}{N(N+2)}]
+\end{align}</script><p>因此</p>
+<script type="math/tex; mode=display">
+\dfrac{\partial u}{\partial \nu}(x)\ge 1-\dfrac{2}{N(N+2)},\quad x\in \partial B</script>
       
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2022/11/01/PDE/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="https://tuowang2002.github.io/2022/11/01/PDE/">https://tuowang2002.github.io/2022/11/01/PDE/</a>
+      </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
@@ -213,38 +294,32 @@ u(x) &= 0, \quad x\in \partial B\tag{2}
         <a class="mdui-ripple article_tags-link" href="/tags/PDE/" rel="tag">PDE</a>
       
     </footer>
+    
   </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2022/04/02/quotient-space/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-12.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">商空间理论在矩阵秩的不等式中的应用</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-04-02 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
-        </div>
-        
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        商空间在矩阵秩的不等式中的应用……
-      
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2022/04/02/quotient-space/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">高等代数</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/Quotient-Space/" rel="tag">Quotient Space</a>
-      
-    </footer>
-  </article>
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2024/05/14/pseudo-Lipschitz/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '伪Lipschitz函数及其性质'}">Prev</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2022/04/02/quotient-space/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '商空间理论在矩阵秩的不等式中的应用'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
 
 
 
