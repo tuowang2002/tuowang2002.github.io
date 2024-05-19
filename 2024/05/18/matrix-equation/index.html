@@ -20,7 +20,7 @@
 <meta property="og:description" content="首先，我们给出如下结果。 定理1：设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，则矩阵方程 $AX&#x3D;XB$ 只有零解当且仅当矩阵 $A$ 与 $B$ 无公共特征值。 证明：先证充分性，设 $f(x)$ 是矩阵 $A$ 的特征多项式，则根据Cayley-Hamilton定理知 $f(A) &#x3D; 0$. 根据 $AX&#x3D;XB$ 知  A^2X &#x3D; A(AX) &#x3D; A(XB) &#x3D; (AX)B">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-05-18T11:29:02.868Z">
-<meta property="article:modified_time" content="2024-05-18T12:34:26.309Z">
+<meta property="article:modified_time" content="2024-05-19T07:00:51.341Z">
 <meta property="article:author" content="Tuo Wang">
 <meta name="twitter:card" content="summary">
 
@@ -178,7 +178,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-19.png" style="max-height: 240px;">
+      <img src="/images/random/material-17.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">神奇的矩阵之门</div>
@@ -212,7 +212,7 @@ AX_0 = (A\alpha)\beta^T = (\lambda\alpha)\beta^T = \alpha(\lambda\beta)^T = \alp
 <script type="math/tex; mode=display">
 A(A-B) = A^2-AB = B^2-AB = (A-B)(-B)</script><p>及定理1知 $A-B = O$，即 $A = B$.</p>
 <p><strong>例2：</strong>设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵，$V$ 是全体 $m\times n$ 阶矩阵构成的向量空间，定义映射 $\varphi: V\to V$，满足 $\varphi(X) = AX-XB$，则 $\varphi$ 是同构当且仅当矩阵 $A$ 与 $B$ 无公共特征值。</p>
-<p><strong>证明：</strong>显然 $\varphi$ 是线性映射，且根据 $V$ 是有限维线性空间知 $\varphi$ 是同构 $\iff\varphi$ 是单射$\iff$ker $\varphi = O\iff $矩阵方程 $AX=XB$ 只有零解$\iff$矩阵 $A$ 与 $B$ 无公共特征值。</p>
+<p><strong>证明：</strong>显然 $\varphi$ 是线性映射，且根据 $V$ 是有限维线性空间知 $\varphi$ 是同构 $\iff\varphi$ 是单射$\iff$ker $\varphi = \{O\}\iff $矩阵方程 $AX=XB$ 只有零解$\iff$矩阵 $A$ 与 $B$ 无公共特征值。</p>
 <p><strong>例3：</strong>设 $A$ 是 $m$ 阶方阵， $B$ 是 $n$ 阶方阵， $A$ 与 $B$ 无公共特征值，且 $A,B$ 均可对角化，证明：矩阵 $M = \begin{pmatrix}A&amp;C\\O&amp;B\end{pmatrix}$ 可对角化。</p>
 <p><strong>证明：</strong>由例2可知，存在 $m\times n$ 阶矩阵 $X$，使得$AX-XB = C$， 由 $A,B$ 均可对角化，设$P^{-1}AP,Q^{-1}BQ$ 均为对角阵。根据</p>
 <script type="math/tex; mode=display">
