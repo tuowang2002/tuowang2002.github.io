@@ -8,25 +8,32 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Category: 抽象代数 | 王拓的学术主页</title>
+  <title>变分推断 | 王拓的学术主页</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="王拓的学术主页" type="application/atom+xml">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="王拓的学术主页">
-<meta property="og:url" content="https://tuowang2002.github.io/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/index.html">
+  <meta name="description" content="KL DivergenceKL散度（Kullback–Leibler divergence）是用来刻画两个分布差异的量 定义（KL 散度） 设$P,Q$是$\mathbb{R}$上连续随机变量，概率密度分别为$p(x)$和$q(x)$，则定义其KL散度为  \mathbb{D}_{KL}(P \| Q) &#x3D; \int_{\mathbb{R}}p(x)\log\dfrac{p(x)}{q(x)}\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="变分推断">
+<meta property="og:url" content="https://tuowang2002.github.io/2024/06/19/kl-divergence/index.html">
 <meta property="og:site_name" content="王拓的学术主页">
+<meta property="og:description" content="KL DivergenceKL散度（Kullback–Leibler divergence）是用来刻画两个分布差异的量 定义（KL 散度） 设$P,Q$是$\mathbb{R}$上连续随机变量，概率密度分别为$p(x)$和$q(x)$，则定义其KL散度为  \mathbb{D}_{KL}(P \| Q) &#x3D; \int_{\mathbb{R}}p(x)\log\dfrac{p(x)}{q(x)}\">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-19T09:16:19.397Z">
+<meta property="article:modified_time" content="2024-06-19T10:29:39.681Z">
 <meta property="article:author" content="Tuo Wang">
+<meta property="article:tag" content="KL 散度">
+<meta property="article:tag" content="变分推断">
+<meta property="article:tag" content="ELBO">
 <meta name="twitter:card" content="summary">
 
-  <meta name="keywords" content="">
+  <meta name="keywords" content=",KL 散度,变分推断,ELBO">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="王拓的学术主页">
-  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">
+  <meta name="msapplication-starturl" content="https://tuowang2002.github.io/2024/06/19/kl-divergence/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="王拓的学术主页">
@@ -34,7 +41,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="https://tuowang2002.github.io/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/index.html">
+    <link rel="canonical" href="https://tuowang2002.github.io/2024/06/19/kl-divergence/">
   
 
   
@@ -169,76 +176,94 @@
 </aside>
 
   <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
-
-  <div class="mdui-chip mdui-m-b-3">
-    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">place</i></span>
-    <span class="mdui-chip-title">Category：抽象代数</span>
-  </div>
-
-
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2021/09/10/group-actions/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-12.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Group actions and some applications</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-09-10 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-17.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">变分推断</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2024-06-19 / <i class="iconfont">&#xe601;</i> Tuo Wang &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
         </div>
+      </div>
+      <div class="mdui-card-menu">
         
-      </header>
-    </a>
+        
+      </div>
+    </header>
     <div class="mdui-card-content mdui-typo">
+      <h2 id="KL-Divergence"><a href="#KL-Divergence" class="headerlink" title="KL Divergence"></a>KL Divergence</h2><p>KL散度（Kullback–Leibler divergence）是用来刻画两个分布差异的量</p>
+<p><strong>定义（KL 散度）</strong> 设$P,Q$是$\mathbb{R}$上连续随机变量，概率密度分别为$p(x)$和$q(x)$，则定义其KL散度为</p>
+<script type="math/tex; mode=display">
+\mathbb{D}_{KL}(P \| Q) = \int_{\mathbb{R}}p(x)\log\dfrac{p(x)}{q(x)}\ dx</script><h2 id="KL-散度的性质"><a href="#KL-散度的性质" class="headerlink" title="KL 散度的性质"></a>KL 散度的性质</h2><p><strong>性质1（非负性）</strong> $\mathbb{D}_{KL}(P | Q)\ge 0$</p>
+<p><strong>证明：</strong>注意到</p>
+<script type="math/tex; mode=display">
+\mathbb{D}_{KL}(P \| Q) = \int_{\mathbb{R}}p(x)\log\dfrac{p(x)}{q(x)}\ dx = -\int_{\mathbb{R}}p(x)\log\dfrac{q(x)}{p(x)}\ dx = -\mathbb{E}_p\left[ \log\dfrac{q(x)}{p(x)} \right].</script><p>而$f(x) = \log(x)$是凹函数，故</p>
+<script type="math/tex; mode=display">
+\mathbb{D}_{KL}(P \| Q) =-\mathbb{E}_p\left[ \log\dfrac{q(x)}{p(x)} \right]\ge -\log\left( \mathbb{E}_p\left[ \log\dfrac{q(x)}{p(x)} \right]\right) = -\log\left( \int_{\mathbb{R}}p(x)\dfrac{q(x)}{p(x)}dx\right) = -\log\left( \int_{\mathbb{R}}q(x)dx\right) = -\log 1 = 0.</script><p>即 $\mathbb{D}_{KL}(P | Q)\ge 0$.</p>
+<p><strong>性质2（非对称性）</strong>$\mathbb{D}_{KL}(P | Q)= \mathbb{D}_{KL}(Q | P)$不一定成立.</p>
+<p><strong>证明：</strong>读者不难自行举出反例.</p>
+<p><strong>注：</strong>KL散度并非距离.</p>
+<h2 id="变分推断"><a href="#变分推断" class="headerlink" title="变分推断"></a>变分推断</h2><p>推断是指根据证据$x$去推断隐变量$z$的条件分布$p(z|x)$，但其不好求解，故通过简单的分布$q(z)$去近似它，为此我们将其转化为如下的泛函极值问题</p>
+<script type="math/tex; mode=display">
+\min_{q_\phi(z|x)}\ \mathbb{D}_{KL}(q_\phi(z|x)\|p(z|x))</script><p>由于处理泛函极值问题常用变分法，故这也许是变分推断名字的由来.</p>
+<p><strong>定理1</strong> 我们有如下等式</p>
+<script type="math/tex; mode=display">
+\log p(x) = \mathbb{E}_{q_\phi(z|x)}\left[ \log\dfrac{p(x,z)}{q_\phi(z|x)}\right]+\mathbb{D}_{KL}(q_\phi(z|x)\|p(z|x))</script><p><strong>证明：</strong>注意到</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\log p(x) &= \log p(x)\cdot \int_{\mathbb{R}}q_\phi(z|x)dz = \int_{\mathbb{R}} \log p(x) q_\phi(z|x)dz = \mathbb{E}_{q_\phi(z|x)}[\log p(x)]\\
+ &= \mathbb{E}_{q_\phi(z|x)}\left[\log \dfrac{p(x,z)}{p(z|x)}\right] = \mathbb{E}_{q_\phi(z|x)}\left[\log \left(\dfrac{p(x,z)}{p(z|x)}\cdot \dfrac{q_\phi(z|x)}{q_\phi(z|x)}\right)\right] \\&= \mathbb{E}_{q_\phi(z|x)}\left[\log \dfrac{p(x,z)}{q_\phi(z|x)}\right]+\mathbb{E}_{q_\phi(z|x)}\left[\log \dfrac{q_\phi(z|x)}{p(z|x)}\right]\\
+ &= \mathbb{E}_{q_\phi(z|x)}\left[ \log\dfrac{p(x,z)}{q_\phi(z|x)}\right]+\mathbb{D}_{KL}(q_\phi(z|x)\|p(z|x)).
+\end{aligned}</script><p>证毕.</p>
+<h3 id="证据下界"><a href="#证据下界" class="headerlink" title="证据下界"></a>证据下界</h3><p>从最大对数似然角度，由定理1以及KL散度的非负性，我们知道</p>
+<script type="math/tex; mode=display">
+\log p(x) \ge \mathbb{E}_{q_\phi(z|x)}\left[ \log\dfrac{p(x,z)}{q_\phi(z|x)}\right]</script><p><strong>定义（证据下界）</strong> 我们将$\mathbb{E}_{q_\phi(z|x)}\left[ \log\dfrac{p(x,z)}{q_\phi(z|x)}\right]$称为证据下界（Evidence Lower BOund），简称BLBO，即</p>
+<script type="math/tex; mode=display">
+\text{ELBO} =\mathbb{E}_{q_\phi(z|x)}\left[ \log\dfrac{p(x,z)}{q_\phi(z|x)}\right].</script><p>从变分推断角度</p>
+<script type="math/tex; mode=display">
+\min_{q_\phi(z|x)}\ \mathbb{D}_{KL}(q_\phi(z|x)\|p(z|x)) =\log p(x) -\text{ELBO}</script><p>而$\log p(x)$相对于优化目标$q_\phi(z|x)$是常数，从而最小化目标函数KL散度等价于最大化ELBO</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从变分推断角度，最大化BLBO等价于最小化KL散度；从最大对数似然角度，最大化ELBO也能使得对数似然尽可能大.</p>
+
       
-        Group actions and some applications……
-      
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2021/09/10/group-actions/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="https://tuowang2002.github.io/2024/06/19/kl-divergence/">https://tuowang2002.github.io/2024/06/19/kl-divergence/</a>
+      </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
-        <a class="mdui-ripple article_categories-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
+        <a class="mdui-ripple article_categories-link" href="/categories/%E4%BF%A1%E6%81%AF%E8%AE%BA/">信息论</a>
       
       
-        <a class="mdui-ripple article_tags-link" href="/tags/Group-theory/" rel="tag">Group theory</a>
+        <a class="mdui-ripple article_tags-link" href="/tags/ELBO/" rel="tag">ELBO</a><a class="mdui-ripple article_tags-link" href="/tags/KL-%E6%95%A3%E5%BA%A6/" rel="tag">KL 散度</a><a class="mdui-ripple article_tags-link" href="/tags/%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD/" rel="tag">变分推断</a>
       
     </footer>
+    
   </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2021/09/09/alternating-group/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-5.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Some methods to prove that alternating group of degree 4 contains no subgroup of order 6</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-09-09 / <i class="iconfont">&#xe601;</i> Tuo Wang</div>
-          </div>
-        </div>
-        
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        Some methods to prove that $A_4$ contains no  subgroup of order 6……
-      
-    </div>
-    <div class="mdui-text-center">
-      <a href="/2021/09/09/alternating-group/" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">Read More</a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">抽象代数</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/Group-theory/" rel="tag">Group theory</a>
-      
-    </footer>
-  </article>
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2024/05/18/matrix-equation/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '神奇的矩阵之门'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
 
 
 
