@@ -2,25 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=https://handsteinwang.github.io/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Redirecting…</title>
-
-  <!-- SEO: indicate the preferred destination URL -->
-  <link rel="canonical" href="https://handsteinwang.github.io/" />
-  <!-- Optional: prevent indexing of this redirect page -->
   <meta name="robots" content="noindex" />
+  <title>Protected Redirect</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 40px; }
+    .card { max-width: 420px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+    label { display:block; margin-bottom: 8px; }
+    input { width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box; }
+    button { margin-top: 12px; padding: 10px 12px; font-size: 16px; cursor: pointer; }
+    .err { color: #b00020; margin-top: 10px; min-height: 1.2em; }
+  </style>
 </head>
 <body>
-  <noscript>
-    <p>Redirecting to <a href="https://handsteinwang.github.io/">Handstein Wang's Blog</a>…</p>
-  </noscript>
+  <div class="card">
+    <h2>Enter Password</h2>
+    <!-- <p>This page will redirect after you enter the correct password.</p> -->
+
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" placeholder="Password" />
+    <button id="go" type="button">Continue</button>
+
+    <div class="err" id="err"></div>
+  </div>
 
   <script>
-    // Use replace() to avoid leaving this page in browser history
-    window.location.replace("https://handsteinwang.github.io/");
-  </script>
+    // 1) Set your destination URL here:
+    const TARGET_URL = "https://handsteinwang.github.io/";
 
-  <p>If you are not redirected automatically, <a href="https://handsteinwang.github.io/">click here</a>.</p>
+    // 2) Put SHA-256(password) in hex here (lowercase):
+    //    Example below is SHA-256("password") => replace it with your own.
+    const PASSWORD_HASH_HEX = "8423462dd03e94c8c5429b8afe2a75e070df4e844e98f85865795bf71dd71447";
+
+    async function sha256Hex(text) {
+      const enc = new TextEncoder().encode(text);
+      const digest = await crypto.subtle.digest("SHA-256", enc);
+      return Array.from(new Uint8Array(digest))
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
+    }
+
+    async function tryRedirect() {
+      const err = document.getElementById("err");
+      err.textContent = "";
+
+      const pw = document.getElementById("pw").value;
+      if (!pw) {
+        err.textContent = "Please enter a password.";
+        return;
+      }
+
+      const hash = await sha256Hex(pw);
+      if (hash === PASSWORD_HASH_HEX) {
+        // Use replace() so this page isn't kept in browser history
+        window.location.replace(TARGET_URL);
+      } else {
+        err.textContent = "Incorrect password.";
+      }
+    }
+
+    document.getElementById("go").addEventListener("click", tryRedirect);
+    document.getElementById("pw").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") tryRedirect();
+    });
+  </script>
 </body>
 </html>
