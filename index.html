@@ -26,29 +26,36 @@
     <div class="err" id="err"></div>
   </div>
 
-  <script>
-  // 1) 目标URL用 base64 存储 + 分段（只是混淆，不是安全）
-  const TARGET_B64_PARTS = [
-    "aHR0cHM6Ly8=",          
-    "aGFuZHN0ZWlud2FuZw==",  
-    "LmdpdGh1Yi5pbw==",      
-    "Lw=="                   
-  ];
+<script>
+  // 把 gen.html 生成的三行粘到这里（页面里不会出现明文 URL）
+  const SALT_B64 = "+w7TJmHehje5Kz2ce5o9eQ==";
+  const IV_B64   = "EWo4DqQR4N7qBIHn";
+  const CT_B64   = "aIggMTti3Kf3tsdgWc1UmkRc072ejpJ5mNbW3Ar0WOLgllIgpOvEb8WSoxl01Res";
 
-  function decodeTargetUrl() {
-    const b64 = TARGET_B64_PARTS.join("");
-    return atob(b64);
+  const ITER = 200000;
+
+  function b64decodeToBytes(b64) {
+    const bin = atob(b64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
   }
 
-  // 2) 你的密码hash保持不变
-  const PASSWORD_HASH_HEX = "8423462dd03e94c8c5429b8afe2a75e070df4e844e98f85865795bf71dd71447";
-
-  async function sha256Hex(text) {
-    const enc = new TextEncoder().encode(text);
-    const digest = await crypto.subtle.digest("SHA-256", enc);
-    return Array.from(new Uint8Array(digest))
-      .map(b => b.toString(16).padStart(2, "0"))
-      .join("");
+  async function deriveKey(password, saltBytes) {
+    const baseKey = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode(password),
+      "PBKDF2",
+      false,
+      ["deriveKey"]
+    );
+    return crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: saltBytes, iterations: ITER, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
   }
 
   async function tryRedirect() {
@@ -61,11 +68,22 @@
       return;
     }
 
-    const hash = await sha256Hex(pw);
-    if (hash === PASSWORD_HASH_HEX) {
-      const target = decodeTargetUrl();
-      window.location.replace(target);
-    } else {
+    try {
+      const salt = b64decodeToBytes(SALT_B64);
+      const iv   = b64decodeToBytes(IV_B64);
+      const ct   = b64decodeToBytes(CT_B64);
+
+      const key = await deriveKey(pw, salt);
+
+      const pt = await crypto.subtle.decrypt(
+        { name: "AES-GCM", iv },
+        key,
+        ct
+      );
+
+      const url = new TextDecoder().decode(pt);
+      window.location.replace(url);
+    } catch (e) {
       err.textContent = "Incorrect password.";
     }
   }
@@ -75,5 +93,6 @@
     if (e.key === "Enter") tryRedirect();
   });
 </script>
+
 </body>
 </html>
