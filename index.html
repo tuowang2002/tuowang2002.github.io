@@ -27,44 +27,53 @@
   </div>
 
   <script>
-    // 1) Set your destination URL here:
-    const TARGET_URL = "https://handsteinwang.github.io/";
+  // 1) 目标URL用 base64 存储 + 分段（只是混淆，不是安全）
+  const TARGET_B64_PARTS = [
+    "aHR0cHM6Ly8=",          // "https://"
+    "aGFuZHN0ZWlud2FuZw==",  // "handsteinwang"
+    "LmdpdGh1Yi5pbw==",      // ".github.io"
+    "Lw=="                   // "/"
+  ];
 
-    // 2) Put SHA-256(password) in hex here (lowercase):
-    //    Example below is SHA-256("password") => replace it with your own.
-    const PASSWORD_HASH_HEX = "8423462dd03e94c8c5429b8afe2a75e070df4e844e98f85865795bf71dd71447";
+  function decodeTargetUrl() {
+    const b64 = TARGET_B64_PARTS.join("");
+    return atob(b64);
+  }
 
-    async function sha256Hex(text) {
-      const enc = new TextEncoder().encode(text);
-      const digest = await crypto.subtle.digest("SHA-256", enc);
-      return Array.from(new Uint8Array(digest))
-        .map(b => b.toString(16).padStart(2, "0"))
-        .join("");
+  // 2) 你的密码hash保持不变
+  const PASSWORD_HASH_HEX = "8423462dd03e94c8c5429b8afe2a75e070df4e844e98f85865795bf71dd71447";
+
+  async function sha256Hex(text) {
+    const enc = new TextEncoder().encode(text);
+    const digest = await crypto.subtle.digest("SHA-256", enc);
+    return Array.from(new Uint8Array(digest))
+      .map(b => b.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  async function tryRedirect() {
+    const err = document.getElementById("err");
+    err.textContent = "";
+
+    const pw = document.getElementById("pw").value;
+    if (!pw) {
+      err.textContent = "Please enter a password.";
+      return;
     }
 
-    async function tryRedirect() {
-      const err = document.getElementById("err");
-      err.textContent = "";
-
-      const pw = document.getElementById("pw").value;
-      if (!pw) {
-        err.textContent = "Please enter a password.";
-        return;
-      }
-
-      const hash = await sha256Hex(pw);
-      if (hash === PASSWORD_HASH_HEX) {
-        // Use replace() so this page isn't kept in browser history
-        window.location.replace(TARGET_URL);
-      } else {
-        err.textContent = "Incorrect password.";
-      }
+    const hash = await sha256Hex(pw);
+    if (hash === PASSWORD_HASH_HEX) {
+      const target = decodeTargetUrl();
+      window.location.replace(target);
+    } else {
+      err.textContent = "Incorrect password.";
     }
+  }
 
-    document.getElementById("go").addEventListener("click", tryRedirect);
-    document.getElementById("pw").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") tryRedirect();
-    });
-  </script>
+  document.getElementById("go").addEventListener("click", tryRedirect);
+  document.getElementById("pw").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") tryRedirect();
+  });
+</script>
 </body>
 </html>
